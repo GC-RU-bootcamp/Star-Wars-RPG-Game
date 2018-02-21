@@ -8,7 +8,7 @@ var game = {
   defender: "",
   defenderId: "",
   defenderCnt: 3,
-  killCnt: 0,
+  killCnt: 1,
   wins: 0,
   losses: 0
 };
@@ -24,12 +24,19 @@ $(document).ready(function(){
   initGame();
 
   $("#btn").on("click", function() {
-    if( $("#btn").text() == "Start Game") {
+    var txt = $("#btn").text();
+
+    if(  txt === "Next Game") {
+      initGame();
+      startGame();
+    }
+    if( txt === "Start Game" ) {
       startGame();
     }
     if( $("#btn").text() == "Attack") {
       attackGame();
     }
+
   });
 
 
@@ -80,23 +87,23 @@ $(document).ready(function(){
       //game.defender = $(".defender").find(".C1");
       game.defenderId = $("#D1").attr("id");
       game.defender = document.getElementById("D1");
-      $(".defender").find(".C1").show();
-      $(".defender").find(".C2, .C3, .C4").hide();
+      $(".defender").filter("#D1").show();
+      $(".defender").filter("#D2, #D3, #D4").hide();
     } else     if($(this).hasClass("C2")){
       game.defender = document.getElementById("D2");
       game.defenderId = $("#D2").attr("id");
-      $(".defender").filter(".C2").show();
-      $(".defender").filter(".C1, .C3, .C4").hide();
+      $(".defender").filter("#D2").show();
+      $(".defender").filter("#D1, #D3, #D4").hide();
     } else  if($(this).hasClass("C3")){
       game.defender = document.getElementById("D3");
       game.defenderId = $("#D3").attr("id");
-      $(".defender").filter(".C3").show();
-      $(".defender").filter(".C1, .C2, .C4").hide();
+      $(".defender").filter("#D3").show();
+      $(".defender").filter("#D1, #D2, #D4").hide();
     }else  if($(this).hasClass("C4")){
       game.defender = document.getElementById("D4");
       game.defenderId = $("#D4").attr("id");
-      $(".defender").filter(".C4").show();
-      $(".defender").filter(".C1, .C2, .C3").hide();
+      $(".defender").filter("#D4").show();
+      $(".defender").filter("#D1, #D2, #D3").hide();
     }
     console.log("game.defender");
     console.log(game.defender);
@@ -109,6 +116,13 @@ $(document).ready(function(){
 
 
   function initGame() {
+    game.attacker = game.defender = "";
+    game.attackerId = game.defenderId = "";
+    game.killCnt = 0;
+    $(".attacker").show();
+    $(".enemy").show();
+    $(".defender").show();
+
     $("#AR").hide();
     $(".attacker").show();
     $("#ER").hide();
@@ -118,9 +132,23 @@ $(document).ready(function(){
     $("#msg").text("");
   ///  $("#msg").text("Press button to attack the XXX");
     // $("#msg").text("");
+    $("#gmsga, #gmsgd").text("");
     $(" .emsg-row, .gmsg-row, .dmsg-row").hide();
    // $("#dmsg").hide();
    // $("#emsg, #gmsg1, #gmsg2").hide();
+   $("span.C1").text($("#A1").attr("value"));
+   $("span.C2").text($("#A2").attr("value"));
+   $("span.C3").text($("#A3").attr("value"));
+   $("span.C4").text($("#A4").attr("value"));
+   $("#A1").attr("health",($("#A1").attr("value")));
+   $("#A2").attr("health",($("#A2").attr("value")));
+   $("#A3").attr("health",($("#A2").attr("value")));
+   $("#A4").attr("health",($("#A2").attr("value")));
+   $("#D1").attr("health",($("#D1").attr("value")));
+   $("#D2").attr("health",($("#D2").attr("value")));
+   $("#D3").attr("health",($("#D2").attr("value")));
+   $("#D4").attr("health",($("#D2").attr("value")));
+   $(".attacker").attr("points", "0");
   };
 
   function startGame()
@@ -170,13 +198,19 @@ $(D).find("span.health").text(dhealth);
      game.losses++;
      updateStats();
      initGame();
-  } else if (game.killCnt === game.defenderCnt) 
-         $("#gmsga").text("You Won this game" );
-         $("#gmsgd").text("" );
-         game.wins++;
-         updateStats();
-  if ( dhealth <= 0 ) {
+  } else if ( dhealth <= 0 ) {
+    game.killCnt++;
+    if (game.killCnt === game.defenderCnt) { 
+      $("#gmsga").text("You Won this game" );
+      $("#gmsgd").text("" );
+      game.wins++;
+      updateStats();
+      $("#btn").text("Next Game") ;
+      $("#btn").show() ;
+      $("#msg").text("") ;
+    } else {
       nextDefender();
+    }
   }
 
  
