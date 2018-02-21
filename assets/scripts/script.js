@@ -228,7 +228,12 @@ function nextDefender(){
 
 function updateStats(){
   $("#wmsg").text("Wins: " + game.wins);
+  $("#wmsg").addClass("text-success");
+  $("#wmsg").addClass("bg-white");
   $("#lmsg").text("Losses: " + game.losses);
+  $("#lmsg").addClass("text-warning");
+  $("#lmsg").addClass("bg-danger");
+
 };
 
 
