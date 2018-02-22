@@ -67,7 +67,7 @@
         <span class="text-center health C1" id="char2-health">100</span>
       </div>
     </div>
-    <div class="col-md-2 attacker C2" id="A2" value="120" attack="20" points="0" health="120" char="Darth Vader">
+    <div class="col-md-2 attacker C2" id="A2" value="120" attack="15" points="0" health="120" char="Darth Vader">
       <div class="border border-success text-center bg-white">
         <span class="text-center char" id="char2-title">Darth Vader</span>
         <br>
@@ -78,7 +78,7 @@
         <span class="text-center health C2" id="char2-health">120</span>
       </div>
     </div>
-    <div class="col-md-2 attacker C3" id="A3" value="100" attack="25"points="0" health="120" char="Darth Sidious">
+    <div class="col-md-2 attacker C3" id="A3" value="120" attack="25" points="0" health="120" char="Darth Sidious">
       <div class="border border-success text-center bg-white">
         <span class="text-center char" id="char3-title">Darth Sidious</span>
         <br>
@@ -89,7 +89,7 @@
         <span class="text-center health C3" id="char3-health">100</span>
       </div>
     </div>
-    <div class="col-md-2 attacker C4" id="A4" value="150" attack="5" points="0"health="120" char="Luke Skywalker">
+    <div class="col-md-2 attacker C4" id="A4" value="150" attack="5" points="0" health="150" char="Luke Skywalker">
       <div class="border border-success text-center bg-white">
         <span class="text-center char" id="char4-title">Luke Skywalker</span>
         <br>
@@ -100,62 +100,21 @@
         <span class="text-center health C4" id="char4-health">150</span>
       </div>
     </div>
+    <div class="col-md-2 attacker C5" id="A5" value="200" attack="12" points="0" health="200" char="Yoda">
+      <div class="border border-success text-center bg-white">
+        <span class="text-center char" id="char5-title">Yoda</span>
+        <br>
+        <!-- <p class="border border-success" id="char4-image"> -->
+        <img src="./assets/images/yoda.png" alt="Yoda" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C5" id="char5-health">150</span>
+      </div>
+    </div>
   </div>
   <!-- END attacker row -->
 
-  <div class="row emsg-row">
-    <h4 id="emsg " class="ml-md-5 text-white">Enemies</h4>
-  </div>
-  <!-- Enemies row -->
-  <div class="row enemies-row" id="ER">
 
-    <!-- enemy cols 1-4 -->
-    <div class="col-md-2 enemy C1" id="E1" value="100" attack="10" points="0" health="100" char="Obi Wan Knobi">
-        <div class="border border-success text-center bg-danger">
-          <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
-          <br>
-          <!-- <p class="border border-success" id="char1-image"> -->
-          <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C1" id="char2-health">100</span>
-        </div>
-      </div>
-      <div class="col-md-2 enemy C2" id="E2" value="120" attack="20" points="0" health="120" char="Darth Vader">
-        <div class="border border-success text-center bg-danger">
-          <span class="text-center char" id="char2-title">Darth Vader</span>
-          <br>
-          <!-- <p class="border border-success" id="char2-image"> -->
-          <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C2" id="char2-health">120</span>
-        </div>
-      </div>
-      <div class="col-md-2 enemy C3" id="E3" value="100" attack="25"points="0" health="120" char="Darth Sidious">
-        <div class="border border-success text-center bg-danger">
-          <span class="text-center char" id="char3-title">Darth Sidious</span>
-          <br>
-          <!-- <p class="border border-success" id="char3-image"> -->
-          <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C3" id="char3-health">100</span>
-        </div>
-      </div>
-      <div class="col-md-2 enemy C4" id="E4" value="150" attack="5" points="0"health="120" char="Luke Skywalker">
-        <div class="border border-success text-center bg-danger">
-          <span class="text-center char" id="char4-title">Luke Skywalker</span>
-          <br>
-          <!-- <p class="border border-success" id="char4-image"> -->
-          <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C4" id="char4-health">150</span>
-        </div>
-      </div>
-  </div>
-  <!-- END Enemies row -->
 
   <div class="row dmsg-row">
     <h4 id="dmsg" class="ml-md-5 text-white">Defender</h4>
@@ -165,65 +124,169 @@
   <div class="row defender-row" id="DR">
 
     <!-- Defender cols 1-4 -->
-    <div class="col-md-2 defender C1" id="D1" value="100" attack="10" points="0" health="100" char="Obi Wan Knobi">
-        <div class="border border-success text-center bg-dark text-white">
-          <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
-          <br>
-          <!-- <p class="border border-success" id="char1-image"> -->
-          <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C1" id="char2-health">100</span>
-        </div>
+    <div class="col-md-2 defender C1" id="D1" value="100" attack="8" points="0" health="100" char="Obi Wan Knobi">
+      <div class="border border-success text-center bg-dark text-white">
+        <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
+        <br>
+        <!-- <p class="border border-success" id="char1-image"> -->
+        <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C1" id="char2-health">100</span>
       </div>
-      <div class="col-md-2 defender C2" id="D2" value="120" attack="20" points="0" health="120" char="Darth Vader">
-        <div class="border border-success text-center bg-dark text-white">
-          <span class="text-center char" id="char2-title">Darth Vader</span>
-          <br>
-          <!-- <p class="border border-success" id="char2-image"> -->
-          <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C2" id="char2-health">120</span>
-        </div>
+    </div>
+    <div class="col-md-2 defender C2" id="D2" value="120" attack="15" points="0" health="120" char="Darth Vader">
+      <div class="border border-success text-center bg-dark text-white">
+        <span class="text-center char" id="char2-title">Darth Vader</span>
+        <br>
+        <!-- <p class="border border-success" id="char2-image"> -->
+        <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C2" id="char2-health">120</span>
       </div>
-      <div class="col-md-2 defender C3" id="D3" value="100" attack="25"points="0" health="120" char="Darth Sidious">
-        <div class="border border-success text-center bg-dark text-white">
-          <span class="text-center char" id="char3-title">Darth Sidious</span>
-          <br>
-          <!-- <p class="border border-success" id="char3-image"> -->
-          <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C3" id="char3-health">100</span>
-        </div>
+    </div>
+    <div class="col-md-2 defender C3" id="D3" value="120" attack="25" points="0" health="120" char="Darth Sidious">
+      <div class="border border-success text-center bg-dark text-white">
+        <span class="text-center char" id="char3-title">Darth Sidious</span>
+        <br>
+        <!-- <p class="border border-success" id="char3-image"> -->
+        <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C3" id="char3-health">100</span>
       </div>
-      <div class="col-md-2 defender C4" id="D4" value="150" attack="5" points="0"health="120" char="Luke Skywalker">
-        <div class="border border-success text-center bg-dark text-white">
-          <span class="text-center char" id="char4-title">Luke Skywalker</span>
-          <br>
-          <!-- <p class="border border-success" id="char4-image"> -->
-          <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
-          <!-- </p> -->
-          <br>
-          <span class="text-center health C4" id="char4-health">150</span>
-        </div>
+    </div>
+    <div class="col-md-2 defender C4" id="D4" value="150" attack="4" points="0" health="150" char="Luke Skywalker">
+      <div class="border border-success text-center bg-dark text-white">
+        <span class="text-center char" id="char4-title">Luke Skywalker</span>
+        <br>
+        <!-- <p class="border border-success" id="char4-image"> -->
+        <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C4" id="char4-health">150</span>
       </div>
+    </div>
+    <div class="col-md-2 defender C5" id="D5" value="200" attack="10" points="0" health="200" char="Yoda">
+      <div class="border border-success text-center bg-dark text-white">
+        <span class="text-center char" id="char5-title">Yoda</span>
+        <br>
+        <!-- <p class="border border-success" id="char4-image"> -->
+        <img src="./assets/images/yoda.png" alt="Yoda" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C5" id="char5-health">150</span>
+      </div>
+    </div>
   </div>
   <!-- </div> -->
+
+  <!-- END Defender row -->
+
+  <div class="row emsg-row">
+    <h4 id="emsg " class="ml-md-5 text-white">Enemies</h4>
+  </div>
+  <!-- Enemies row -->
+  <div class="row enemies-row" id="ER">
+
+    <!-- enemy cols 1-4 -->
+    <div class="col-md-2 enemy C1" id="E1" value="100" attack="10" points="0" health="100" char="Obi Wan Knobi">
+      <div class="border border-success text-center bg-danger">
+        <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
+        <br>
+        <!-- <p class="border border-success" id="char1-image"> -->
+        <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C1" id="char2-health">100</span>
+      </div>
+    </div>
+    <div class="col-md-2 enemy C2" id="E2" value="120" attack="15" points="0" health="120" char="Darth Vader">
+      <div class="border border-success text-center bg-danger">
+        <span class="text-center char" id="char2-title">Darth Vader</span>
+        <br>
+        <!-- <p class="border border-success" id="char2-image"> -->
+        <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C2" id="char2-health">120</span>
+      </div>
+    </div>
+    <div class="col-md-2 enemy C3" id="E3" value="120" attack="25" points="0" health="120" char="Darth Sidious">
+      <div class="border border-success text-center bg-danger">
+        <span class="text-center char" id="char3-title">Darth Sidious</span>
+        <br>
+        <!-- <p class="border border-success" id="char3-image"> -->
+        <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C3" id="char3-health">100</span>
+      </div>
+    </div>
+    <div class="col-md-2 enemy C4" id="E4" value="150" attack="5" points="0" health="150" char="Luke Skywalker">
+      <div class="border border-success text-center bg-danger">
+        <span class="text-center char" id="char4-title">Luke Skywalker</span>
+        <br>
+        <!-- <p class="border border-success" id="char4-image"> -->
+        <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C4" id="char4-health">150</span>
+      </div>
+    </div>
+    <div class="col-md-2 enemy C5" id="E5" value="200" attack="12" points="0" health="200" char="Yoda">
+      <div class="border border-success text-center bg-danger">
+        <span class="text-center char" id="char5-title">Yoda</span>
+        <br>
+        <!-- <p class="border border-success" id="char4-image"> -->
+        <img src="./assets/images/yoda.png" alt="Yoda" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C5" id="char5-health">150</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- END Enemies row -->
 
   <div class="row gmsg-row">
     <h4 id="gmsga" class="ml-md-5 text-white">--</h4>
     <br>
     <h4 id="gmsgd" class="ml-md-5 text-white">--</h4>
   </div>
-  <!-- END Defender row -->
 
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header" id="modal-header">
+          <h2 class="modal-title" id="modal-title">Modal title</h2>
+          <button type="button" class="close" data-dismiss="modal" id="modal-btn-x">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h4 id="modal-body">Modal body</h4>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" id="modal-btn">Next Game</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End modal dialog -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" -->
+  <!-- crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"

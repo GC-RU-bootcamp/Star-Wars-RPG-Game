@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Star Wars RPG - Gary Cender</title>
+  <link rel="icon" href="./assets/images/smiley.png" type="image/png" sizes="16x16">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <style>
+    body {
+      /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+      /* font-size: 18px; */
+      /* line-height: 34px; */
+      /* color: #777; */
+      /* background: url("../images/concrete_seamless.png"); */
+      background: url("./assets/images/xwingBG.png");
+
+    }
+
+
+    * {
+      /* border: 1px solid red !important; */
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="row head">
+    <div class="col-md-12">
+      <h1 class="text-center text-white">Star Wars Game
+        <small> -- Gary Cender</small>
+      </h1>
+
+    </div>
+  </div>
+  <div class="row stat-row">
+    <h4 id="wmsg" class="ml-md-5 text-white" value="0">Wins</h4>
+    <h4 id="lmsg" class="ml-md-5 text-white" value="0">Losses</h4>
+  </div>
+
+  <div class="row message">
+    <a name="" id="btn" class="btn btn-warning ml-md-5" href="#" role="button">Start Game</a>
+    <h4 id="msg" class="ml-md-5 text-white">Choose your attacker</h4>
+
+  </div>
+
+  <!-- attacker row -->
+  <div class="row attacker-row" id="AR">
+
+    <!-- attacker cols 1-4 -->
+    <div class="col-md-2 attacker C1" id="A1" value="100" attack="10" points="0" health="100" char="Obi Wan Knobi">
+      <div class="border border-success text-center bg-white">
+        <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
+        <br>
+        <!-- <p class="border border-success" id="char1-image"> -->
+        <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C1" id="char2-health">100</span>
+      </div>
+    </div>
+    <div class="col-md-2 attacker C2" id="A2" value="120" attack="20" points="0" health="120" char="Darth Vader">
+      <div class="border border-success text-center bg-white">
+        <span class="text-center char" id="char2-title">Darth Vader</span>
+        <br>
+        <!-- <p class="border border-success" id="char2-image"> -->
+        <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C2" id="char2-health">120</span>
+      </div>
+    </div>
+    <div class="col-md-2 attacker C3" id="A3" value="100" attack="25"points="0" health="120" char="Darth Sidious">
+      <div class="border border-success text-center bg-white">
+        <span class="text-center char" id="char3-title">Darth Sidious</span>
+        <br>
+        <!-- <p class="border border-success" id="char3-image"> -->
+        <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C3" id="char3-health">100</span>
+      </div>
+    </div>
+    <div class="col-md-2 attacker C4" id="A4" value="150" attack="5" points="0"health="120" char="Luke Skywalker">
+      <div class="border border-success text-center bg-white">
+        <span class="text-center char" id="char4-title">Luke Skywalker</span>
+        <br>
+        <!-- <p class="border border-success" id="char4-image"> -->
+        <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
+        <!-- </p> -->
+        <br>
+        <span class="text-center health C4" id="char4-health">150</span>
+      </div>
+    </div>
+  </div>
+  <!-- END attacker row -->
+
+ 
+
+  <div class="row dmsg-row">
+    <h4 id="dmsg" class="ml-md-5 text-white">Defender</h4>
+  </div>
+
+  <!-- Defender row -->
+  <div class="row defender-row" id="DR">
+
+    <!-- Defender cols 1-4 -->
+    <div class="col-md-2 defender C1" id="D1" value="100" attack="10" points="0" health="100" char="Obi Wan Knobi">
+        <div class="border border-success text-center bg-dark text-white">
+          <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
+          <br>
+          <!-- <p class="border border-success" id="char1-image"> -->
+          <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
+          <!-- </p> -->
+          <br>
+          <span class="text-center health C1" id="char2-health">100</span>
+        </div>
+      </div>
+      <div class="col-md-2 defender C2" id="D2" value="120" attack="20" points="0" health="120" char="Darth Vader">
+        <div class="border border-success text-center bg-dark text-white">
+          <span class="text-center char" id="char2-title">Darth Vader</span>
+          <br>
+          <!-- <p class="border border-success" id="char2-image"> -->
+          <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
+          <!-- </p> -->
+          <br>
+          <span class="text-center health C2" id="char2-health">120</span>
+        </div>
+      </div>
+      <div class="col-md-2 defender C3" id="D3" value="100" attack="25"points="0" health="120" char="Darth Sidious">
+        <div class="border border-success text-center bg-dark text-white">
+          <span class="text-center char" id="char3-title">Darth Sidious</span>
+          <br>
+          <!-- <p class="border border-success" id="char3-image"> -->
+          <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
+          <!-- </p> -->
+          <br>
+          <span class="text-center health C3" id="char3-health">100</span>
+        </div>
+      </div>
+      <div class="col-md-2 defender C4" id="D4" value="150" attack="5" points="0"health="120" char="Luke Skywalker">
+        <div class="border border-success text-center bg-dark text-white">
+          <span class="text-center char" id="char4-title">Luke Skywalker</span>
+          <br>
+          <!-- <p class="border border-success" id="char4-image"> -->
+          <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
+          <!-- </p> -->
+          <br>
+          <span class="text-center health C4" id="char4-health">150</span>
+        </div>
+      </div>
+  </div>
+  <!-- </div> -->
+
+  <!-- END Defender row -->
+
+  <div class="row emsg-row">
+      <h4 id="emsg " class="ml-md-5 text-white">Enemies</h4>
+    </div>
+    <!-- Enemies row -->
+    <div class="row enemies-row" id="ER">
+  
+      <!-- enemy cols 1-4 -->
+      <div class="col-md-2 enemy C1" id="E1" value="100" attack="10" points="0" health="100" char="Obi Wan Knobi">
+          <div class="border border-success text-center bg-danger">
+            <span class="text-center char" id="char1-title" value="10">Obi Wan Knobi</span>
+            <br>
+            <!-- <p class="border border-success" id="char1-image"> -->
+            <img src="./assets/images/obi-wan-kenobi.png" alt="Obi Wan Knobi" height=100>
+            <!-- </p> -->
+            <br>
+            <span class="text-center health C1" id="char2-health">100</span>
+          </div>
+        </div>
+        <div class="col-md-2 enemy C2" id="E2" value="120" attack="20" points="0" health="120" char="Darth Vader">
+          <div class="border border-success text-center bg-danger">
+            <span class="text-center char" id="char2-title">Darth Vader</span>
+            <br>
+            <!-- <p class="border border-success" id="char2-image"> -->
+            <img src="./assets/images/darthVader2.png" alt="Darth Vader" height=100>
+            <!-- </p> -->
+            <br>
+            <span class="text-center health C2" id="char2-health">120</span>
+          </div>
+        </div>
+        <div class="col-md-2 enemy C3" id="E3" value="100" attack="25"points="0" health="120" char="Darth Sidious">
+          <div class="border border-success text-center bg-danger">
+            <span class="text-center char" id="char3-title">Darth Sidious</span>
+            <br>
+            <!-- <p class="border border-success" id="char3-image"> -->
+            <img src="./assets/images/darthSidious.png" alt="Darth Sidious" height=100>
+            <!-- </p> -->
+            <br>
+            <span class="text-center health C3" id="char3-health">100</span>
+          </div>
+        </div>
+        <div class="col-md-2 enemy C4" id="E4" value="150" attack="5" points="0"health="120" char="Luke Skywalker">
+          <div class="border border-success text-center bg-danger">
+            <span class="text-center char" id="char4-title">Luke Skywalker</span>
+            <br>
+            <!-- <p class="border border-success" id="char4-image"> -->
+            <img src="./assets/images/luke.png" alt="Luke Skywalker" height=100>
+            <!-- </p> -->
+            <br>
+            <span class="text-center health C4" id="char4-health">150</span>
+          </div>
+        </div>
+    </div>
+    <!-- END Enemies row -->
+
+  <div class="row gmsg-row">
+    <h4 id="gmsga" class="ml-md-5 text-white">--</h4>
+    <br>
+    <h4 id="gmsgd" class="ml-md-5 text-white">--</h4>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" -->
+    <!-- crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+<script src="./assets/scripts/script-4char.js"></script>
+
+</html>
