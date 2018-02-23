@@ -3,9 +3,7 @@
 // $("#DR").hide();
 
 var game = {
-  attacker: "",
   attackerId: "",
-  defender: "",
   defenderId: "",
   defenderCnt: 4,
   killCnt: 0,
@@ -59,12 +57,10 @@ $(document).ready(function () {
       }  else if ($(this).hasClass("C5")) {
         $(".enemy").filter(".C5").hide();
       }
-      game.attacker = this;
       game.attackerId = $(this).attr("id");
 
       $("#btn").text("wait");
       $
-      console.log(game.attacker.getAttribute("char"));
     } else if ($("#btn").text() == "Attack") {
       attackGame();
     }
@@ -116,9 +112,7 @@ $(document).ready(function () {
       }
       $("#ER").fadeTo(1000, 0.2);
       $("#enemies-row").fadeTo(1000, 0.2);
-      console.log("game.defender");
-      console.log(game.defender);
-      console.log(game.defender.getAttribute("char"));
+
 
       $(".gmsg-row").show();
     }
@@ -127,7 +121,6 @@ $(document).ready(function () {
 
 
   function initGame() {
-    game.attacker = game.defender = "";
     game.attackerId = game.defenderId = "";
     game.killCnt = 0;
 
@@ -250,11 +243,12 @@ $(document).ready(function () {
 
   function updateStats() {
     $("#wmsg").text("Wins: " + game.wins);
-    $("#wmsg").addClass("text-success");
-    $("#wmsg").addClass("bg-white");
+    $("#wmsg").addClass("text-success bg-white border border-success rounded p-1");
+    // $("#wmsg").addClass("bg-white");
     $("#lmsg").text("Losses: " + game.losses);
-    $("#lmsg").addClass("text-warning");
-    $("#lmsg").addClass("bg-danger");
+    $("#lmsg").addClass("text-danger bg-white border border-danger rounded p-1");
+    // $("#lmsg").addClass("bg-danger");
+    
 
   };
 
@@ -263,8 +257,9 @@ $(document).ready(function () {
     $("#modal-body").text(bodyMsg);
 
     $("#myModal").modal({
-      backdrop: "static",
-      keyboard: false // to prevent closing with Esc button (if you want this too)
+      // backdrop: "static",
+      // keyboard: false 
+      // to prevent closing with Esc button (if you want this too)
     });
 
     this.dialogOpen = true;
@@ -273,8 +268,11 @@ $(document).ready(function () {
     // });
   }
 
+ 
+
   //$("#DR").document;
   // $("button").click(function(){
   //     $("p").slideToggle();
   // });
-});
+}); 
+
