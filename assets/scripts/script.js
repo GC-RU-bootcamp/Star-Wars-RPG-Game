@@ -252,8 +252,8 @@ $(document).ready(function () {
 
   };
 
-  function showDialog (headMsg, bodyMsg) {
-    $("#modal-header").text(headMsg);
+  function showDialog (titleMsg, bodyMsg) {
+    $("#modal-title").text(titleMsg);
     $("#modal-body").text(bodyMsg);
 
     $("#myModal").modal({
